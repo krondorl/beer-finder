@@ -1,0 +1,17 @@
+<header class="header">
+  <nav class="header__nav">
+    <a class="header__link" routerLink="/">
+      <div>
+        <span class="header__logotext">Beer finder</span>
+      </div>
+    </a>
+    <div class="header__currentuser" *ngIf="currentUser">
+      <span class="header__hello">Hello, {{ currentUser }}!</span>
+      <button class="header__logout button" (click)="logout()">Logout</button>
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  <router-outlet></router-outlet>
+</main>

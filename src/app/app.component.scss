@@ -1,0 +1,29 @@
+@import "../colors";
+
+.main {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 10px 20px 50px;
+}
+
+.header__currentuser {
+  float: none;
+  margin: 0 0 0 auto;
+  text-align: right;
+
+  @media (min-width: 550px) {
+    float: right;
+  }
+}
+
+.header__hello {
+  color: $theme-white;
+  font-weight: bold;
+}
+
+.header__logout {
+  background: $theme-neon-green;
+  color: $theme-black;
+  font-weight: bold;
+  margin: 7px 0 0 9px;
+}

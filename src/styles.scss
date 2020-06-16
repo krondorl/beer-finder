@@ -1,0 +1,76 @@
+@import "colors";
+
+* {
+  box-sizing: border-box;
+}
+
+:link,
+:visited,
+:hover,
+:active {
+  color: $theme-black;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: $theme-black;
+  min-height: 68px;
+}
+
+.header__nav {
+  padding: 10px;
+
+  @media (min-width: 550px) {
+    padding: 3px 10px;
+  }
+}
+
+.header__link,
+.header__logo,
+.header__logotext {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.header__logotext {
+  color: $theme-neon-green;
+  font-size: 23px;
+  font-weight: bold;
+  left: 10px;
+  letter-spacing: .5px;
+  position: relative;
+  top: 18px;
+}
+
+.button {
+  background: $theme-purple;
+  border: 0;
+  border-radius: 9px;
+  color: $theme-white;
+  cursor: pointer;
+  font-size: 18px;
+  height: 41px;
+  min-width: 92px;
+
+  &:hover {
+    background: $theme-button-hover-grey;
+    color: $theme-white;
+  }
+
+  &:focus {
+    background: $theme-button-focus-grey;
+    color: $theme-black;
+    outline: 0;
+  }
+}
+
+.header__link:hover {
+  color: $theme-white;
+}

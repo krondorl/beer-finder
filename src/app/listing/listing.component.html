@@ -1,0 +1,28 @@
+<section class="listcontrols">
+  <div class="listcontrols__left">
+    <label class="listcontrols__label" for="name">Name:</label>
+    <input [(ngModel)]="namePart" id="name" class="listcontrols__input listcontrols__name" type="text" placeholder="Name">
+  </div>
+  <div class="listcontrols__right">
+    <label class="listcontrols__label" for="abv">ABV:</label>
+    <input [(ngModel)]="abvMinimum" id="abv" class="listcontrols__input listcontrols__number" type="text" placeholder="0">
+    <span class="listcontrols__label">% - </span>
+    <input [(ngModel)]="abvMaximum" class="listcontrols__input listcontrols__number" type="text" placeholder="100">
+    <span class="listcontrols__label">%</span>
+    <button class="listcontrols__filter button" (click)="filter()">Filter</button>
+  </div>
+</section>
+<section class="paging">
+  <button class="paging__previous button" (click)="previous()">◀️ Previous</button>
+  <button class="paging__previous button" (click)="next()">Next ▶️</button>
+</section>
+<div class="beerlist">
+  <div class="beerlist__beer" *ngFor="let beer of (beerlist | async)">
+    <a class="beerlist__link" [routerLink]="['/details/' + beer.id]">
+      <img class="beerlist__img" [src]="beer.image_url"/>
+      <br>
+      <span class="beerlist__name">{{ beer.name }}</span>
+      ABV: {{ beer.abv }}%
+    </a>
+  </div>
+</div>

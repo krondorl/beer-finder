@@ -1,0 +1,19 @@
+<form *ngIf="!userLoggedin" class="loginform" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2 class="loginform__h2">Login</h2>
+  <div class="loginform__row">
+    <input formControlName="username" type="text" class="loginform__input" placeholder="Username" maxlength="16"/>
+  </div>
+  <div class="loginform__error" *ngIf="loginError">
+    <span>Couldn't log in. Please, try again!</span>
+  </div>
+  <div class="loginform__row">
+    <button [disabled]="loading" class="loginform__button button" type="submit">
+      <span class="loginform__spinner"></span>
+      Login
+    </button>
+  </div>
+</form>
+<div *ngIf="userLoggedin">
+  <p>You are already logged in!</p>
+  <p>Please, go <a [routerLink]="['/listing']">➡️ to the listing page</a></p>
+</div>

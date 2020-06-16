@@ -1,0 +1,27 @@
+.beerdetails__container {
+  display: block;
+
+  @media (min-width: 650px) {
+    display: flex;
+  }
+}
+
+.beerdetails__left {
+  padding: 0 50px;
+}
+
+.beerdetails__right {
+  flex: 1;
+}
+
+.beerdetails__h1 {
+  font-size: 30px;
+}
+
+.beerdetails__h2 {
+  font-size: 26px;
+}
+
+.beerdetails__img {
+  max-height: 497px;
+}

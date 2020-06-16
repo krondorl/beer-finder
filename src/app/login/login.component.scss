@@ -1,0 +1,53 @@
+@import "../../colors";
+
+::placeholder {
+  font-size: 18px;
+}
+
+.loginform {
+  background: $theme-white;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 200px 10px $theme-login-shadow-grey;
+  height: 272px;
+  margin: 310px auto;
+  padding: 20px 50px;
+  width: 500px;
+}
+
+.loginform__h2 {
+  font-size: 32px;
+  position: relative;
+  top: 3px;
+}
+
+.loginform__row {
+  font-size: inherit;
+}
+
+.loginform__input {
+  border: 1px solid $theme-input-light-grey;
+  font-size: 16px;
+  height: 45px;
+  padding: 2px 10px;
+  width: 100%;
+}
+
+.loginform__input:focus {
+  outline: 1px solid $theme-input-light-grey;
+}
+
+.loginform__button {
+  float: right;
+  margin-top: 22px;
+}
+
+.loginform__spinner {
+  font-size: inherit;
+}
+
+.loginform__error {
+  color: $theme-error-red;
+  font-weight: bold;
+  margin: .5em 0;
+}

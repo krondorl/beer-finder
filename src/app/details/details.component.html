@@ -1,0 +1,19 @@
+<a [routerLink]="['/listing']">⬅️ Back to listing</a>
+<div class="beerdetails" *ngIf="(beer | async) as beer">
+  <h1 class="beerdetails__h1">{{ beer[0].name }}</h1>
+  <h2 class="beerdetails__h2">{{ beer[0].tagline }}</h2>
+  <div class="beerdetails__container">
+    <div class="beerdetails__left"><img class="beerdetails__img" [src]="beer[0].image_url"/></div>
+    <div class="beerdetails__right">
+      <h3 class="beerdetails__h3">Description</h3>
+      <p>{{ beer[0].description }}</p>
+      <p><strong>ABV:</strong> {{ beer[0].abv}}%</p>
+      <h3 class="beerdetails__h3">Food pairings:</h3>
+      <ul>
+        <li *ngFor="let food_pairing_item of beer[0].food_pairing">{{ food_pairing_item }}</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
