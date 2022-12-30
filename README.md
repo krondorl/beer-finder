@@ -46,3 +46,7 @@ The app looks like these images:
 2. Execute `npm start` for a dev server.
 3. Navigate to `http://localhost:4200/`.
 
+## License
+
+Please read [the license file.](LICENSE)
+

@@ -1,5 +1,8 @@
 {
   "name": "beer-finder",
+  "description": "Beer catalog using the Punk API",
+  "author": "Adam Burucs",
+  "license": "CC BY-NC-ND 4.0",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
