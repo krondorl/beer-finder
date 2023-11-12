@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "beer-finder:build"
+            "buildTarget": "beer-finder:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "beer-finder:build:production"
+              "buildTarget": "beer-finder:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "beer-finder:build"
+            "buildTarget": "beer-finder:build"
           }
         },
         "test": {
