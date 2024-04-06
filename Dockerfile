@@ -1,34 +1,15 @@
-# Use official Node.js image as the base image
 FROM node:20.11-alpine
-
-# Set working directory
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
-
-# Install dependencies
+RUN npm install -g @angular/cli@17.0.0
 RUN npm install
-
-# Copy the rest of the application code to the working directory
 COPY . .
-
-# Build the Next.js application
-RUN npm run build
-
-# Expose the port Next.js is running on
-EXPOSE 4200
-
-# Set environment variables for configuration
-ENV NODE_ENV=production
-ENV PORT=4200
-
-# Add labels for better maintainability
 LABEL maintainer="Adam Burucs"
-LABEL description="Dockerfile for Beer Finder"
+LABEL description="Beer Finder"
 
-# Command to start the application
-CMD ["npm", "start"]
+# This is needed for proper running of Angular
+# https://stackoverflow.com/questions/46778868/ng-serve-not-working-in-docker-container
+CMD ["ng","serve","--host", "0.0.0.0"]
 
 #
 # Build and run
